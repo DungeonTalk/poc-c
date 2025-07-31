@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.0'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'org.com'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // WebFlux 스타터
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // R2DBC를 사용할 경우
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+
+    // R2DBC PostgreSQL 드라이버 (PostgreSQL 17 호환 가능)
+    implementation 'org.postgresql:r2dbc-postgresql:1.0.7.RELEASE'
+
+    // JDBC 드라이버 선택
+//    runtimeOnly "org.postgresql:postgresql:42.7.3" // JDBC 드라이버 (선택)
+
+    // 기존 JUnit 설정
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // 테스트
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
