@@ -1,4 +1,4 @@
-package org.com.dungeonpoc.domain;
+package org.com.dungeonpoc.book.domain;
 
 import lombok.Getter;
 import lombok.Setter;

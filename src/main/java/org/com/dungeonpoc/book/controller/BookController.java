@@ -1,8 +1,8 @@
-package org.com.dungeonpoc.controller;
+package org.com.dungeonpoc.book.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.com.dungeonpoc.domain.Book;
-import org.com.dungeonpoc.service.BookService;
+import org.com.dungeonpoc.book.domain.Book;
+import org.com.dungeonpoc.book.service.BookService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

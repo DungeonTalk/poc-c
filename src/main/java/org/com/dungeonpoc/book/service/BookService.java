@@ -1,8 +1,8 @@
-package org.com.dungeonpoc.service;
+package org.com.dungeonpoc.book.service;
 
 import lombok.RequiredArgsConstructor;
-import org.com.dungeonpoc.domain.Book;
-import org.com.dungeonpoc.repository.BookRepository;
+import org.com.dungeonpoc.book.domain.Book;
+import org.com.dungeonpoc.book.repository.BookRepository;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

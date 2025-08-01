@@ -1,6 +1,6 @@
-package org.com.dungeonpoc.repository;
+package org.com.dungeonpoc.book.repository;
 
-import org.com.dungeonpoc.domain.Book;
+import org.com.dungeonpoc.book.domain.Book;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 
