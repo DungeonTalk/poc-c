@@ -21,7 +21,7 @@ public class ChatMessage {
     @Id
     private Long id;
 
-    @Column(nullable = false)
+    @Column
     private Long roomId;
 
     @Column
